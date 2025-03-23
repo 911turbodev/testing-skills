@@ -1,9 +1,10 @@
 #include <stdio.h>
 int main()
-{   
-do {
+{  
     int opcion;
     int num1, num2, num3, resultado;
+
+do {
     printf("\nMenu calculadora\n");
     printf("1. Suma\n");
     printf("2. Resta\n");
@@ -14,7 +15,22 @@ do {
     printf("Elija una opcion para empezar\n");
     scanf("%d", &opcion);
     
-}
+    switch (opcion)
+    {
+    case 1:
+        printf("\nIngrese dos numeros para sumar\n");
+        scanf("%d %d", &num1, &num2);
+        printf("\nResultado: %d\n",num1 + num2);
+        break;
+    
+    default:
+        break;
+    }
+
+
+} while (opcion != 7);
+
     return 0;
 }
-//v1
+//v1.1 
+//suma hecha
