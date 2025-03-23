@@ -2,7 +2,7 @@
 int main()
 {  
     int opcion;
-    int num1, num2, num3, resultado;
+    int num1, num2;
 
 do {
     printf("\nMenu calculadora\n");
@@ -10,7 +10,6 @@ do {
     printf("2. Resta\n");
     printf("3. Multiplicacion\n");
     printf("4. Division\n");
-    printf("6. Ordenar de mayor a menor tres valores\n");
     printf("7. Salir\n");
     printf("Elija una opcion para empezar\n");
     scanf("%d", &opcion);
@@ -33,11 +32,16 @@ do {
         printf("\nIngrese dos numeros para multiplicar\n");
         scanf("%d %d", &num1, &num2);
         printf("\nResultado: %d\n",num1 * num2);
-    default:
-        break;
+
+    case 4:
+    printf("\nIngrese dos numeros para dividir\n");
+    scanf("%d %d", &num1, &num2);
+    if (num2 > 0){
+    printf("\nResultado: %d\n",num1 / num2);
+    }else 
+    printf("Sin definir\n");
+    break;
     }
-
-
 } while (opcion != 7);
 
     return 0;
