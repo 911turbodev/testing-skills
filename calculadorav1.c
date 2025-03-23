@@ -28,6 +28,11 @@ do {
         scanf("%d %d", &num1, &num2);
         printf("\nResultado: %d\n",num1 - num2);
         break;    
+
+    case 3:
+        printf("\nIngrese dos numeros para multiplicar\n");
+        scanf("%d %d", &num1, &num2);
+        printf("\nResultado: %d\n",num1 * num2);
     default:
         break;
     }
@@ -40,3 +45,4 @@ do {
 //v1.1 
 //suma hecha
 //resta hecha
+//multiplicacion hecha
