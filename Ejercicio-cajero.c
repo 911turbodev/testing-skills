@@ -46,5 +46,6 @@ int main()
     } while (opcion != 4);
     
     return 0;
-    //esto es un comentario para ver que onda
+    //version finalizada del cajero
+    //mas adelante agregare actualizaciones a medida que avance con mis conocimientos 03-22-2025
 }
