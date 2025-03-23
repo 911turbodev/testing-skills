@@ -48,5 +48,5 @@ int main()
     return 0;
     //version finalizada del cajero
     //mas adelante agregare actualizaciones a medida que avance con mis conocimientos 03-22-2025
-    //version v.1
+    //version v.1.0
 }
