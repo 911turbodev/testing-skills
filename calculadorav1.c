@@ -32,21 +32,30 @@ do {
         printf("\nIngrese dos numeros para multiplicar\n");
         scanf("%d %d", &num1, &num2);
         printf("\nResultado: %d\n",num1 * num2);
-
+        break;
     case 4:
     printf("\nIngrese dos numeros para dividir\n");
     scanf("%d %d", &num1, &num2);
-    if (num2 > 0){
+    if (num2 != 0) {
     printf("\nResultado: %d\n",num1 / num2);
     }else 
     printf("Sin definir\n");
     break;
+    
+    case 7: 
+    printf("Gracias por usar la calculadora.\n");
+    break;
+    
+    default:
+        printf("\nOpcion invalida. Intente de nuevo\n");
+        break;
     }
 } while (opcion != 7);
-
     return 0;
 }
+
 //v1.1 
 //suma hecha
 //resta hecha
 //multiplicacion hecha
+//division hecha
