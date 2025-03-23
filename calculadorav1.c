@@ -23,6 +23,11 @@ do {
         printf("\nResultado: %d\n",num1 + num2);
         break;
     
+    case 2:
+        printf("\nIngrese dos numeros para restar\n");
+        scanf("%d %d", &num1, &num2);
+        printf("\nResultado: %d\n",num1 - num2);
+        break;    
     default:
         break;
     }
@@ -34,3 +39,4 @@ do {
 }
 //v1.1 
 //suma hecha
+//resta hecha
