@@ -3,12 +3,12 @@ int main()
 {
     int opcion;
     //Menu interactivo
-    printf("1. Calculadora\1.n");
-    printf("2. Ordenar 3 numeros\1.n");
-    printf("3. Verificador mayor de edad\1.n");
+    printf("1. Calculadora\n");
+    printf("2. Ordenar 3 numeros\n");
+    printf("3. Verificador mayor de edad\n");
     printf("4. Tabla de multiplicar\n");
-    printf("5. Salir\1.n");
-    printf("Ingrese una opcion\1.n");
+    printf("5. Salir\n");
+    printf("Ingrese una opcion\n");
     scanf("%d", &opcion);
     switch (opcion)
     {
@@ -20,7 +20,10 @@ int main()
         printf("3. Division\n");
         printf("4. Multiplicacion\n");
         scanf("%d", &subopcion);
-            switch (subopcion){
+
+            switch (subopcion)
+            {
+
             case 1:
                 printf("Ingrese dos numeros para sumar: \n");
                 scanf("%d %d", &num1, &num2);
@@ -41,16 +44,12 @@ int main()
                         printf("Sin definir, no puede dividir por 0\n");
                     }
                     break;
-            default:
-                    printf("Subopcion invalida.\n");
-                break;
-            }
-            break;
-        }
-        case 2:{
+                 }
+            case 2:{
+
             int subopcion, a, b, c, temp;
             printf("Ingrese 3 numeros para ordenar de menor a mayor: \n");
-            scanf("%d %d %d", a, b, c);
+            scanf("%d %d %d", &a, &b, &c);
             //ordenar numeros de menor a mayor:
             if (a > b) { temp = a; a = b; b = temp; }
             if (a > c) { temp = a; a = c; c = temp; }
@@ -59,8 +58,6 @@ int main()
             printf("El orden de los valores es: %d %d %d\n",a,b,c);
             break;
         }
-       break;
-    }
     case 3: {
         int age;
         printf("Ingrese su edad:\n");
@@ -77,8 +74,8 @@ int main()
         case 4:{
             int n, i;
             printf("Ingrese un numero para la tabla de multiplicar:\n");
-            scanf("%d",  n);
-            if  n > 0 && n <=10){
+            scanf("%d",  &n);
+            if  (n > 0 && n <=10) {
                 for (i = 1 ; i <= 10 ; i++){
                     printf("%d x %d = %d", n, i, n*i);
                 }
