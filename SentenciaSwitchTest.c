@@ -2,25 +2,28 @@
 int main()
 {
     int opcion;
+
     do{
+        //mostrar el menu
     printf("Menu de opciones: \n");
     printf("1. Operaciones matematicas\n");
     printf("2. Ordenar 3 numeros\n");
     printf("3. Tabla de multiplicar\n");
     printf("4. Exit\n");
-    printf("5. Ingrese una opcion: \n");
+    printf("Ingrese una opcion: \n");
     scanf("%d", &opcion);
-    switch (opcion)
-    {
-    case 1:
+
+    switch (opcion){
+
+    case 1:{
     int subopcion;
     int num1, num2;
+
         printf("1. Suma\n");
         printf("2. Resta\n");
         printf("Ingrese una subopcion:");
         scanf("%d", &subopcion);
-        switch (subopcion)
-        {
+        switch (subopcion){
         case 1:
             printf("Ingrese dos numeros para sumar: \n");
             scanf("%d %d",&num1 , &num2);
@@ -35,10 +38,10 @@ int main()
         default:
             printf("Subopcion invalida\n");
             break;
-        }
+         }
         break;
-    }
-    case 2:{
+     }
+    case 2: {
         int a, b, c;
             printf("\nIngrese tres numeros: ");
             scanf("%d %d %d", &a, &b, &c);
@@ -64,7 +67,7 @@ int main()
 
         case 4:
             printf("\nSaliendo del programa...\n");
-            break;
+            exit(0);
 
         default:
             printf("\nOpcion no valida, intente de nuevo.\n");
