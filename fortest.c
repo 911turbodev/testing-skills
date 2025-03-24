@@ -18,8 +18,8 @@ int main(){
         if (n>0){
             for (i = 1; i <= 10; i++){
                 printf("%d x %d = %d\n",n,i,n*i);
-            }
-        }else{
+            } 
+        }else {
             printf("Numero invalido.\n");
             }
             break;
