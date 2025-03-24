@@ -41,7 +41,6 @@ do {
         break;
     }else if (opcion > 3 || opcion < 1){
         printf("Opcion invalida.\n");
-        break;
     }
 } while (opcion != 3);
     return 0;
