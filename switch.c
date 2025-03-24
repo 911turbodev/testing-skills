@@ -10,8 +10,8 @@ int main()
     printf("5. Salir\n");
     printf("Ingrese una opcion\n");
     scanf("%d", &opcion);
-    switch (opcion)
-    {
+
+    switch (opcion){
     case 1:{
         int subopcion, num1, num2;
         //otro menu interactivo
@@ -20,9 +20,8 @@ int main()
         printf("3. Division\n");
         printf("4. Multiplicacion\n");
         scanf("%d", &subopcion);
-
-            switch (subopcion)
-            {
+        
+        switch (subopcion){
 
             case 1:
                 printf("Ingrese dos numeros para sumar: \n");
@@ -34,7 +33,6 @@ int main()
                 scanf("%d %d", &num1, &num2);
                 printf("Resultado: %d\n",num1 - num2);
                 break;
-
             case 3:
                 printf("Ingrese dos numeros para dividir: \n");
                     scanf("%d %d", &num1, &num2);
@@ -44,10 +42,20 @@ int main()
                         printf("Sin definir, no puede dividir por 0\n");
                     }
                     break;
-                 }
-            case 2:{
+            case 4:
+                 printf("Ingrese dos numeros para multiplicar: \n");
+                 scanf("%d %d", &num1, &num2);
+                 printf("Resultado: %d\n", num1 * num2);
+                 break;
+             default:
+                 printf("Subopcion invalida.\n");
+                 break;
+              }
+            break;
+         }
+            case 2: {
 
-            int subopcion, a, b, c, temp;
+            int a, b, c, temp;
             printf("Ingrese 3 numeros para ordenar de menor a mayor: \n");
             scanf("%d %d %d", &a, &b, &c);
             //ordenar numeros de menor a mayor:
@@ -71,17 +79,19 @@ int main()
         }
        break;
     }
-        case 4:{
-            int n, i;
-            printf("Ingrese un numero para la tabla de multiplicar:\n");
-            scanf("%d",  &n);
-            if  (n > 0 && n <=10) {
-                for (i = 1 ; i <= 10 ; i++){
-                    printf("%d x %d = %d", n, i, n*i);
-                }
-              break;
+    case 4: {
+        int n, i;
+        printf("Ingrese un numero para la tabla de multiplicar:\n");
+        scanf("%d",  &n);
+        if  (n > 0 && n <=10) {
+             for (i = 1; i <= 10; i++) {
+                printf("%d x %d = %d", n, i, n * i);
+            } 
+        } else {
+                printf("Numero fuera de rango. Debe estar entre 1 y 10.\n");
             }
-        }
+         break;
+    }
     case 5: 
         printf("Finalizando el menu...\n");
         break;
