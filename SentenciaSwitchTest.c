@@ -47,11 +47,30 @@ int main()
             if (a > b) { int temp = a; a = b; b = temp; }
             if (b > c) { int temp = b; b = c; c = temp; }
             if (a > b) { int temp = a; a = b; b = temp; }
-            
+
             printf("Numeros ordenados: %d %d %d\n", a, b, c);
             break;
         }
-    }while (opcion != 4);
+
+        case 3: {
+            int n, i;
+            printf("\nIngrese un numero para la tabla de multiplicar: ");
+            scanf("%d", &n);
+            for (i = 1; i <= 10; i++) {
+                printf("%d x %d = %d\n", n, i, n * i);
+            }
+            break;
+        }
+
+        case 4:
+            printf("\nSaliendo del programa...\n");
+            break;
+
+        default:
+            printf("\nOpcion no valida, intente de nuevo.\n");
+            break;
+        }
+    }while (opcion != 4); // Repetir hasta que el usuario elija salir
 
     return 0;
 }
