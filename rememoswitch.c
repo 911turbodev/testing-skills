@@ -30,10 +30,21 @@ int main()
                 }
             break;
         }
-    }
-    case 2: {
         break;
     }
+    case 2: {
+        printf("Ingrese dos numeros para multiplicar o dividir\n");
+        scanf("%d %d", &a, &b);
+        printf("Ingrese [1] para multiplicar o [2] para dividir\n");
+        scanf("%d",&opc);
+        if (opc == 1){
+            printf("Resultado %d x %d=%d",a,b,a*b);
+        }else{
+            printf("Resultado %d / %d=%d",a,b,a/b);
+        }
+        break;
+    }
+    case 2:
     }
     return 0;
 }
