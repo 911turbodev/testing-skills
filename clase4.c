@@ -41,10 +41,6 @@ int main()
         }else{
             printf("%d no es primo\n",num);
         }
-
-
-
-
     }
     return 0;
 }
