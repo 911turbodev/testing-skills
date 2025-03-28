@@ -13,34 +13,38 @@
 
 int main()
 {
-   int num, i, primo;
-   
-   do {
-       printf("Ingrese un numero para verificar si es primo (0 para salir): ");
-       scanf("%i", &num);
+    int num,i,esPrimo;
+    while (1){
+    printf("Ingrese un numero entero positivo, (0 para finalizar)\n");
+    scanf("%d",&num);
+        if (num == 0){
+            printf("Finalizando programa...\n"); break;
+        }
+        if (num < 0){
+            printf("No puede ser menor un numero negativo.");
+            continue;
+        }
 
-       if (num > 0) {
-           primo = 1; // Asumimos que es primo
-           for (i = 2; i <= num / 2; i++) {
-               if (num % i == 0) {
-                   primo = 0; // No es primo
-                   break;
-               }
-           }
+            //verificar si es primo o no
+            esPrimo = 1;
+            i = 2; //primer divisior
 
-           if (primo) {
-               printf("%d: Es primo\n", num);
-           } else {
-               printf("%d: No es primo\n", num);
-           }
-       } else if (num < 0) {
-           printf("Por favor, ingrese un numero entero positivo.\n");
-       }
-   } while (num != 0);
-
-   printf("\nFinalizando el programa...\n");
+            while (i <= num / 2){
+                if (num % i == 0){
+                    esPrimo = 0;
+                    break;
+                }
+                i++;
+            }
+        if (esPrimo && num > 1){
+            printf("%d es primo\n",num);
+        }else{
+            printf("%d no es primo\n",num);
+        }
 
 
 
+
+    }
     return 0;
 }
